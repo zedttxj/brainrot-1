@@ -564,6 +564,7 @@ input, select, textarea {
   padding: var(--spacing-sm) var(--spacing-md);
   cursor: pointer;
   transition: background-color var(--transition-fast);
+  z-index: 101;
 }
 
 .dropdown-item:hover {
