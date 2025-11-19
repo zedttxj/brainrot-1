@@ -170,12 +170,20 @@ function Sidebar({ tabs, activeTab, setActiveTab }) {
 
 // Main Content Area Component
 function MainContentArea({ content }) {
+    const divStyle = {
+        height: "100vh",
+        width: "calc(100vw - 280px)",
+        alignItems: "center",
+        overflowY: "auto",
+    };
   return (
+      <div style={divStyle}>
     <main className="main-content" role="main">
       <div className="content-section">
         {content}
       </div>
     </main>
+    </div>
   );
 }
 
@@ -729,6 +737,7 @@ function MenuContent() {
 
 function SettingsContent() {
   return (
+    <div style={{alignItems: "center", display: "flex", flexDirection: "column",}}>
     <div>
       <h2 className="section-title">About Brainrot Bar</h2>
       
@@ -837,6 +846,7 @@ function SettingsContent() {
           </div>
         </div>
       </div>
+                                                                                          </div>
     </div>
   );
 }
@@ -884,7 +894,7 @@ function HelpContent() {
             <StarRating rating={data1.notes} />
             <div 
               className="brainrot-badge"
-              style={{ backgroundColor: getBrainrotColor(data1.notes), marginTop: '0.5rem' }}
+              style={{ backgroundColor: getBrainrotColor(data1.notes), marginTop: '0.5rem', margin:"10px",}}
             >
               {getBrainrotLevel(data1.notes)}
             </div>
@@ -903,7 +913,7 @@ function HelpContent() {
             <StarRating rating={data2.notes} />
             <div 
               className="brainrot-badge"
-              style={{ backgroundColor: getBrainrotColor(data2.notes), marginTop: '0.5rem' }}
+              style={{ backgroundColor: getBrainrotColor(data2.notes), marginTop: '0.5rem', marginLeft: "10px", }}
             >
               {getBrainrotLevel(data2.notes)}
             </div>
