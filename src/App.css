@@ -181,6 +181,7 @@ input, select, textarea {
   overflow-y: auto;
   background-color: var(--color-surface);
   padding: var(--spacing-2xl);
+  width: calc(100vw - 280px);
 }
 
 .content-section {
@@ -1010,6 +1011,7 @@ input, select, textarea {
   border-radius: var(--radius-md);
   border-left: 4px solid var(--brand-primary);
   transition: all var(--transition-fast);
+  z-index: 1;
 }
 
 .metric-item:hover {
@@ -1087,6 +1089,7 @@ input, select, textarea {
   
   .main-content {
     padding: var(--spacing-lg);
+    width: 100vw;
   }
   
   .card-grid {
@@ -1119,6 +1122,7 @@ input, select, textarea {
   
   .main-content {
     padding: var(--spacing-md);
+    width: 100vw;
   }
 }
 
@@ -1160,4 +1164,3 @@ html {
 .loading {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
-
