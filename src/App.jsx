@@ -319,7 +319,7 @@ function Dropdown({ id, options, selectedOption, onChange, placeholder = "Select
   };
 
   return (
-    <div className="dropdown-wrapper" ref={dropdownRef}>
+    <div className="dropdown-wrapper" ref={dropdownRef} onBlur={() => setIsOpen(false)}>
       <button
         id={id}
         className="dropdown-trigger"
@@ -337,7 +337,7 @@ function Dropdown({ id, options, selectedOption, onChange, placeholder = "Select
             <li
               key={option}
               className="dropdown-item"
-              onClick={() => handleSelect(option)}
+              onMouseDown={() => handleSelect(option)}
               role="option"
               aria-selected={option === selected}
             >
@@ -867,6 +867,7 @@ function HelpContent() {
     return val1 < val2 ? 'show1' : 'show2';
   };
 
+
   return (
     <div>
       <h2 className="section-title">Compare Shows</h2>
@@ -884,7 +885,7 @@ function HelpContent() {
             <StarRating rating={data1.notes} />
             <div 
               className="brainrot-badge"
-              style={{ backgroundColor: getBrainrotColor(data1.notes), marginTop: '0.5rem' }}
+              style={{ backgroundColor: getBrainrotColor(data1.notes), marginTop: '0.5rem', marginLeft: "10px" }}
             >
               {getBrainrotLevel(data1.notes)}
             </div>
@@ -903,7 +904,7 @@ function HelpContent() {
             <StarRating rating={data2.notes} />
             <div 
               className="brainrot-badge"
-              style={{ backgroundColor: getBrainrotColor(data2.notes), marginTop: '0.5rem' }}
+              style={{ backgroundColor: getBrainrotColor(data2.notes), marginTop: '0.5rem', marginLeft: "10px" }}
             >
               {getBrainrotLevel(data2.notes)}
             </div>
