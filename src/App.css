@@ -68,6 +68,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none !important;
 }
 
 body {
@@ -181,6 +182,7 @@ input, select, textarea {
   overflow-y: auto;
   background-color: var(--color-surface);
   padding: var(--spacing-2xl);
+  width: calc(100vw - 280px);
 }
 
 .content-section {
@@ -269,14 +271,13 @@ input, select, textarea {
   box-shadow: var(--shadow-lg);
   max-height: 300px;
   overflow-y: auto;
-  z-index: 1000;
 }
 
 .search-dropdown-item {
   padding: var(--spacing-sm) var(--spacing-md);
   cursor: pointer;
   transition: background-color var(--transition-fast);
-  color: var(--color-text-primary);
+  color: #878;
 }
 
 .search-dropdown-item:hover {
@@ -564,6 +565,7 @@ input, select, textarea {
   padding: var(--spacing-sm) var(--spacing-md);
   cursor: pointer;
   transition: background-color var(--transition-fast);
+  color: #878;
 }
 
 .dropdown-item:hover {
@@ -1010,6 +1012,7 @@ input, select, textarea {
   border-radius: var(--radius-md);
   border-left: 4px solid var(--brand-primary);
   transition: all var(--transition-fast);
+  z-index: 1;
 }
 
 .metric-item:hover {
@@ -1087,6 +1090,7 @@ input, select, textarea {
   
   .main-content {
     padding: var(--spacing-lg);
+    width: 100vw;
   }
   
   .card-grid {
@@ -1119,6 +1123,7 @@ input, select, textarea {
   
   .main-content {
     padding: var(--spacing-md);
+    width: 100vw;
   }
 }
 
@@ -1160,4 +1165,3 @@ html {
 .loading {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
-
