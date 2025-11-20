@@ -176,6 +176,13 @@ input, select, textarea {
 }
 
 /* Main Content */
+.main-content-wrapper {
+    height: 100vh;
+    width: calc(100vw - 280px);
+    align-items: center;
+    overflow-y: auto;
+}
+
 .main-content {
   flex: 1;
   overflow-y: auto;
@@ -1016,6 +1023,7 @@ input, select, textarea {
   background-color: rgba(139, 92, 246, 0.05);
   border-left-color: var(--brand-primary-light);
   transform: translateX(4px);
+  z-index: 1;
 }
 
 .metric-label {
@@ -1079,6 +1087,10 @@ input, select, textarea {
     bottom: 0;
     transform: translateX(-100%);
     width: 280px;
+  }
+
+  .main-content-wrapper {
+      width: 100vw;
   }
   
   .sidebar.open {
@@ -1160,4 +1172,3 @@ html {
 .loading {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
-
